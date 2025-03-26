@@ -1,0 +1,35 @@
+\mode<presentation>
+
+% Requirements
+\RequirePackage{tikz}
+
+% Settings
+\usefonttheme{professionalfonts}
+\useinnertheme{Warwick}
+\useoutertheme{Warwick}
+\usecolortheme{Warwick}
+
+\setbeamertemplate{navigation symbols}{
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{footline}
+    \hspace{1em}
+    \insertframenumber/\inserttotalframenumber
+}
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% Beamer margin
+\setbeamersize
+{
+text margin left=1cm,
+text margin right=1cm
+}
+
+\setbeamertemplate{caption}[numbered]
+
+\AtBeginSection[]{
+\frame{\sectionpage}
+}
+
+\mode<all>

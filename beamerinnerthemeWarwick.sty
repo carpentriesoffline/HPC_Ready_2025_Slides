@@ -1,0 +1,54 @@
+\mode<presentation>
+
+\setbeamertemplate{background}{
+\begin{tikzpicture}
+\useasboundingbox (0, 0) rectangle (\the\paperwidth, \the\paperheight);
+	\fill[logo_color]
+	(0, \the\paperheight) --
+	(\the\paperwidth, \the\paperheight) --
+	(\the\paperwidth, \the\paperheight-0.3cm) --
+%	(\the\paperwidth-0.8cm, \the\paperheight-0.3cm) -- (\the\paperwidth-1.2cm, \the\paperheight-1.0cm) -- (\the\paperwidth-1.6cm, \the\paperheight-0.3cm) -- (\the\paperwidth-1.4cm, \the\paperheight-0.3cm) -- (\the\paperwidth-1.8cm, \the\paperheight-1.0cm) -- (\the\paperwidth-2.2cm, \the\paperheight-0.3cm) -- 
+	(0, \the\paperheight-0.3cm) --
+	cycle;
+
+	% \ifnum\thepage>1\relax%
+	% \fill[title_color] (0, 0) rectangle(\the\paperwidth,\the\paperheight);
+	% \fi
+\end{tikzpicture}
+}
+
+\defbeamertemplate*{title page}{Warwick}[1][]{
+\vbox{
+\vskip0.5em
+\begin{beamercolorbox}[sep=8pt, center, #1]{beamer color box}
+    {\usebeamercolor[]{titlegraphic}\inserttitlegraphic\par}
+\end{beamercolorbox}
+%
+\vskip0.5em%
+\begin{beamercolorbox}[sep=8pt, center, #1]{title page header}
+\usebeamerfont{title}\inserttitle\par%
+    \ifx \insertsubtitle \empty%
+    \else%
+    \vskip0.5em%
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+    \fi%
+\end{beamercolorbox}
+\vskip0.5em%\par
+%
+\begin{beamercolorbox}[center, #1]{author}
+\usebeamerfont{author}\insertauthor
+\end{beamercolorbox}
+\vskip0.25em%\par
+%
+\begin{beamercolorbox}[center, #1]{institute}
+\usebeamerfont{institute}\insertinstitute
+\end{beamercolorbox}
+\vskip0.5em%\par
+%
+\begin{beamercolorbox}[center, #1]{date}
+\usebeamerfont{date}\insertdate
+\end{beamercolorbox}
+\vfill
+}
+}
+\mode<all>

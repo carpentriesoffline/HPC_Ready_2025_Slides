@@ -1,0 +1,63 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Warwick}
+
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+
+\usepackage{datetime}
+\usepackage[style=ieee]{biblatex}
+\renewcommand*{\bibfont}{\scriptsize}
+
+\title{CarpentriesOffline - A mini HPC}
+\author{
+    Dr Jannetta S Steyn  
+}
+\institute{
+    Newcastle University
+}
+\date{\shortdate{\formatdate{2025}{03}{27}}}
+\titlegraphic{    
+    \makebox{
+        \includegraphics[height=3.5em,keepaspectratio]{images/wallpaper.jpg}
+    }
+}
+\logo{\includegraphics[height=4em, keepaspectratio]{images/UniversityLogo.png}}
+
+\addbibresource{ref.bib}
+
+\begin{document}
+\captionsetup[figure]{labelfont={bf}, name={Fig.}}
+
+
+\frame{\titlepage}
+
+%\begin{frame}{Outline}
+%    \tableofcontents[hideallsubsections]
+%\end{frame}
+
+\input{S1/s1.tex} % Introduction
+
+\input{S2/s2.tex} 
+
+\input{S3/s3.tex}
+
+\input{S4/s4.tex}
+
+\input{S5/s5.tex}
+
+\section*{Thanks}
+\begin{frame}
+\frametitle{}
+\centering\LARGE Thank You For Listening \\
+\centering\LARGE Any Questions?
+\end{frame}
+
+
+
+\end{document}

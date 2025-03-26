@@ -1,0 +1,30 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{Warwick}[1][]{
+\vskip-0.04cm
+\begin{beamercolorbox}[wd=\the\paperwidth, ht=1.5cm]{frametitle}
+	\begin{tikzpicture}
+		\useasboundingbox (0, 0) rectangle (\the\paperwidth, \the\paperheight);
+		\ifx\insertframesubtitle\@empty
+			{\node[anchor=west, frametitle_color, font=\Large] at (0.4cm, 0.75cm){\insertframetitle};}
+			\else
+			{\node[anchor=west, frametitle_color, font=\Large] at (0.4cm, 0.75cm){\insertframetitle};
+			\node[anchor=west, framesubtitle_color, font=\large] at (0.4cm, 0.2cm){\insertframesubtitle};}
+		\fi
+	\end{tikzpicture}
+\end{beamercolorbox}
+}
+
+% Section title
+\defbeamertemplate*{section page}{Warwick}[1][]{
+\vspace*{-0.2cm}
+\begin{beamercolorbox}[wd=\the\paperwidth, ht=\the\paperheight]{part title}
+\begin{tikzpicture}
+\useasboundingbox (0, 0) rectangle (\the\paperwidth, \the\paperheight);
+{\node[text=section_color, anchor=center, font=\Large] at (0.5*\the\paperwidth, 0.5*\the\paperheight){\insertsection};}
+\end{tikzpicture}
+\end{beamercolorbox}
+}
+
+\mode<all>
